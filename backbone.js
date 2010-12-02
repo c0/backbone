@@ -625,6 +625,7 @@
         var args = this._extractParameters(route, fragment);
         callback.apply(this, args);
         this.trigger.apply(this, ['route:' + name].concat(args));
+        this.trigger.apply(this, ['route']);
       }, this));
     },
 
